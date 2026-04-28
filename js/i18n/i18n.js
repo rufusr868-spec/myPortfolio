@@ -137,7 +137,7 @@ function applyNumberFormat(locale) {
     });
 }
 
-/* ── ReqI10: percentage formatting ─────────────────────────────────────── */
+/* ── ReqI10: percentage formatting ─────────────────────────────────── */
 
 function createPercentageFormatter(locale) {
     const numberLocale = locale === 'ro' ? 'ro-RO' : (locale === 'es' ? 'es-ES' : 'en-GB');
@@ -175,7 +175,7 @@ function applyPercentageFormat(locale) {
     }
 
     /* ReqI6: load translation file, restore saved locale, apply everything */
-    fetch('/myPortfolio/js/i18n/translations.json')
+    fetch('./js/i18n/translations.json')
         .then(response => response.json())
         .then(data => {
             translations = data; /* ReqI2 */
