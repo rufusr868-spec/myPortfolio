@@ -175,7 +175,7 @@ function applyPercentageFormat(locale) {
     }
 
     /* ReqI6: load translation file, restore saved locale, apply everything */
-    fetch('/js/i18n/translations.json')
+    fetch('/myPortfolio/js/i18n/translations.json')
         .then(response => response.json())
         .then(data => {
             translations = data; /* ReqI2 */
