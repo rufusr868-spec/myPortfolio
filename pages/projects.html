@@ -1,0 +1,139 @@
+<!DOCTYPE html> <!--ReqH1-->
+<html lang="en"> <!--ReqH1-->
+    <head>
+        <!--ReqH2-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="My completed and future electronics projects">
+        <meta name="author" content="Andrei">
+        <meta name="keywords" content="embedded,RLC,transistor logic,remote car">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/projects-page.css">
+        <title>My Projects</title> <!--ReqH2-->
+    </head>
+
+<body>
+
+    <!--ReqH3-->
+    <header>
+        <div class="header-bar">
+            <h1>My Projects</h1> <!--ReqH5-->
+            <!--ReqH8-->
+            <nav>
+                <ul>
+                    <!--ReqH9: target="_self" on internal links-->
+                    <li><a href="../index.html" target="_self">Home</a></li> <!--ReqH11-->
+                    <li><a href="projects.html" target="_self">Projects</a></li>
+                    <li><a href="contact.html" target="_self">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--ReqH3 ReqH4-->
+    <main>
+
+        <!--ReqH3 ReqH4-->
+        <section class="future-projects">
+            <h2>What I want to do</h2> <!--ReqH5-->
+            <p>
+                Here I will describe what I want to build in the future.
+            </p>
+
+            <!--ReqH6: em and strong for emphasis-->
+            <p>
+                I am <strong>very motivated</strong> to work on
+                <em>challenging embedded systems</em>.
+            </p>
+
+            <!--ReqH7: dfn, code, cite-->
+            <p>
+                The <dfn title="Pulse-Width Modulation">PWM</dfn> technique
+                is used to control motor speed via <code>analogWrite(pin, value)</code>.
+                According to <cite>Arduino Reference Manual</cite>, values range from 0 to 255.
+            </p>
+
+            <div>
+                <p>
+                    <strong>Sonar</strong> &mdash; I will need more components.
+                </p>
+                <p>
+                    <strong>AI control</strong> &mdash; I want to combine AI and embedded systems.
+                </p>
+            </div>
+
+            <p>
+                I hope I will complete all of these in the future.
+            </p>
+        </section>
+
+        <!--ReqH3-->
+        <section>
+            <h2>Completed Projects</h2> <!--ReqH5-->
+
+            <!--ReqH15: table with caption, th, rowspan, colspan-->
+            <table>
+                <caption>Completed projects overview</caption> <!--ReqH15-->
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th colspan="2">Project details</th> <!--ReqH15: colspan-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">2025</td> <!--ReqH15: rowspan-->
+                        <td>Remote car</td>
+                        <td>Made with Arduino</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Sonar</td> <!--ReqH15: colspan-->
+                    </tr>
+                    <tr>
+                        <td>2026</td>
+                        <td colspan="2">Game engine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--ReqH3-->
+        <section>
+            <h2>Resources</h2> <!--ReqH5-->
+
+            <!--ReqH14: ordered list-->
+            <ol>
+                <li>Arduino IDE — main development environment</li>
+                <li>KiCad — PCB design tool</li>
+                <li>Proteus — circuit simulation</li>
+            </ol>
+
+            <!--ReqH9: external link-->
+            <p>
+                More info at
+                <a href="https://www.arduino.cc" target="_blank">Arduino official site</a>. <!--ReqH9-->
+            </p>
+
+            <!--ReqH12 ReqH13-->
+            <figure>
+                <!--ReqH10: image as link-->
+                <a href="../index.html" target="_self"> <!--ReqH10 ReqH11-->
+                    <img src="../src/pcb.jpg"
+                         alt="A basic printed circuit board layout"
+                         title="PCB example"
+                         width="300"
+                         height="100"> <!--ReqH12-->
+                </a>
+                <figcaption>A basic PCB used in the remote car project.</figcaption> <!--ReqH13-->
+            </figure>
+        </section>
+
+    </main>
+
+    <!--ReqH3-->
+    <footer>
+        <p>&copy; 2026 My brand. All rights reserved</p>
+    </footer>
+
+</body>
+</html>

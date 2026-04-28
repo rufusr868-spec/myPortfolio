@@ -1,0 +1,80 @@
+/* projects-page.css — linked only from pages/projects.html */
+
+/* ReqS5: main 85vw, horizontally centered */
+main {
+    width: 85vw;
+    margin: 0 auto;
+    padding: 1rem; /* ReqC2 */
+}
+
+/* future projects section */
+section.future-projects {
+    border: 2px solid #52a00d;
+    border-radius: 8px;
+    padding: 1em; /* ReqC2 */
+    margin: 1.5em 0; /* ReqC2 */
+    background-color: rgb(198, 219, 237);
+}
+
+section.future-projects h2 {
+    font-weight: bold;
+    color: rgb(86, 26, 0);
+}
+
+/* ReqS11: descendant combinator — all p inside future-projects */
+section.future-projects p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #478413;
+}
+
+/* ReqS10: child combinator — only direct p children */
+section.future-projects > p {
+    color: rgb(127, 3, 244);
+}
+
+/* ReqS12: adjacent sibling combinator — p immediately after h2 */
+section.future-projects h2 + p {
+    font-weight: bold;
+    color: chocolate;
+}
+
+/* table styling */
+table {
+    border: 1px solid #6a0404;
+    border-collapse: collapse;
+    width: 65vw;
+    margin-left: 1.5em; /* ReqC2 */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th, td {
+    border: 1px solid #855757;
+    padding: 0.4em; /* ReqC2 */
+    text-align: center;
+}
+
+/* ReqC17: th styled distinctly from td */
+thead th {
+    background-color: rgb(229, 171, 240);
+    font-weight: bold;
+}
+
+thead tr:hover th {
+    background-color: rgb(228, 207, 233);
+}
+
+/* ReqS16: caption styling — position and appearance */
+caption {
+    caption-side: top; /* ReqS16 */
+    font-weight: bold;
+    font-size: 1.1em; /* ReqC2 */
+    padding: 0.5em 0; /* ReqC2 */
+    text-align: left;
+    color: #6a0404;
+}
+
+/* ReqS15: ordered list with different list-style-type */
+ol {
+    list-style-type: decimal-leading-zero; /* ReqS15 */
+    padding-left: 1.5em; /* ReqC2 */
+}

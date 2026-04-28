@@ -1,0 +1,161 @@
+<!DOCTYPE html> <!--ReqH1-->
+<html lang="en"> <!--ReqH1-->
+    <head>
+        <!--ReqH2-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Contact page — send me a message">
+        <meta name="author" content="Andrei">
+        <meta name="keywords" content="contact,embedded,projects,email">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/single-page.css">
+        <script src="../js/myJS.js" defer></script> <!--ReqJ1-->
+        <title>Contact Me</title> <!--ReqH2-->
+    </head>
+<body>
+
+    <!--ReqH3-->
+    <header>
+        <div class="header-bar">
+            <h1>Contact Me</h1> <!--ReqH5-->
+            <!--ReqH8-->
+            <nav>
+                <ul>
+                    <!--ReqH9: target="_self" on all internal links-->
+                    <li><a href="../index.html" target="_self">Home</a></li>
+                    <li><a href="projects.html" target="_self">Projects</a></li>
+                    <li><a href="contact.html" target="_self">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--ReqH3 ReqS5-->
+    <main class="responsive">
+
+        <!--ReqH16: form with name, method=post, action=mailto-->
+        <!--ReqJ4-->
+        <!--ReqJ7-->
+        <form name="contactForm"
+              action="mailto:auiu144@gmail.com?subject=Contact%20Form"
+              onsubmit="return validateForm()" 
+              onreset="resetForm()"
+              method="post"
+              onkeydown="handleKeydown(event)" 
+              novalidate>
+
+            <!--ReqH20-->
+            <fieldset>
+                <legend>Contact info</legend>
+
+                <!--ReqH17-->
+                <!--ReqJ2 ReqJ3-->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"
+                    oninput="updatePreview(); checkValidityState(this)"
+                    onmouseover="handleMouseOver(this)" 
+                    onmouseout="handleMouseOut(this)"> 
+                    <!--ReqJ8-->
+
+                <label for="phone">Phone:</label>
+                <!--ReqH19: pattern validation for Spanish phone number-->
+                <input type="tel" id="phone" name="phone"
+                    pattern="^(\+34|0034|34)?[67]\d{8}$" required
+                    oninput="updatePreview(); checkValidityState(this)"
+                    onmouseover="handleMouseOver(this)" 
+                    onmouseout="handleMouseOut(this)"> 
+                     <!--ReqJ2 ReqJ3-->
+                     <!--ReqJ8-->
+
+                     <!--ReqH19-->
+                      <!--ReqJ2 ReqJ3-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required
+                    oninput="updatePreview(); checkValidityState(this)"
+                    onmouseover="handleMouseOver(this)"
+                    onmouseout="handleMouseOut(this)">
+                    <!--ReqJ8-->
+
+                <!--ReqH17: password input-->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+            </fieldset>
+
+            <!--ReqH20-->
+            <fieldset>
+                <legend>What are your interests</legend>
+
+                <label for="embedded" class="option">Embedded
+                    <input type="checkbox" id="embedded" name="interests" value="embedded" onchange="updatePreview()"> <!--ReqJ2-->
+                </label>
+                <label for="software" class="option">Software
+                    <input type="checkbox" id="software" name="interests" value="software" onchange="updatePreview()"> <!--ReqJ2-->
+                </label>
+                <label for="hardware" class="option">Hardware
+                    <input type="checkbox" id="hardware" name="interests" value="hardware" onchange="updatePreview()"> <!--ReqJ2-->
+                </label>
+
+                <label for="category" class="option">Category:
+                    <!--ReqH20: select with optgroup-->
+                    <select id="category" name="category">
+                        <optgroup label="build">
+                            <option value="PCB">PCB</option>
+                            <option value="breadboard">Breadboard</option>
+                        </optgroup>
+                        <optgroup label="code">
+                            <option value="game">Game</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </fieldset>
+
+            <!--ReqH20: radio button group-->
+            <fieldset>
+                <legend>What is your background</legend>
+                <label for="student" class="option">Student
+                    <input type="radio" id="student" name="background" value="student">
+                </label>
+                <label for="postgraduate" class="option">Postgraduate
+                    <input type="radio" id="postgraduate" name="background" value="postgraduate">
+                </label>
+                <label for="beginner" class="option">Beginner
+                    <input type="radio" id="beginner" name="background" value="beginner">
+                </label>
+            </fieldset>
+
+            <!--ReqH17-->
+            <fieldset>
+                <legend>Message me</legend>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required
+                    oninput="updatePreview()">Type here</textarea> <!--ReqJ2-->
+            </fieldset>
+
+            <!--ReqJ5: inline error box, hidden by default-->
+            <div id="error-box" class="error-box" role="alert" aria-live="polite"></div>
+
+            <!--ReqH18-->
+            <button type="submit" class="btn" id="submit-btn">Send Message</button>
+            <button type="reset"  class="btn" id="reset-btn">Reset</button>
+
+        </form>
+
+        <!--ReqJ2: live preview container-->
+        <section id="preview">
+            <h2>Live Preview</h2>
+            <div id="preview-content">
+                <p>Form preview will appear here.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!--ReqH3-->
+    <footer>
+        <p>&copy; 2026 My brand. All rights reserved</p>
+    </footer>
+
+</body>
+</html>

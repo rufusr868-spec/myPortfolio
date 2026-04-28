@@ -1,0 +1,239 @@
+/* ReqC4: CSS custom properties for colours, background and spacing */
+:root {
+    --color-primary: darkred;
+    --color-secondary: chocolate;
+    --color-background: blanchedalmond;
+    --color-text: #690f0f;
+    --color-btn: rgb(120, 180, 70);
+    --color-btn-hover: darkslateblue;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+}
+
+/* ReqC4: reset common margins and padding */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ReqC1: site-wide font family applied globally */
+body {
+    font-size: 1rem; /* ReqC2 */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* ReqC1 */
+    background-color: var(--color-background); /* ReqC4 */
+    color: var(--color-text); /* ReqC4 */
+    margin: 0;
+    padding: 0;
+}
+
+/* ReqC3: distinct heading styles h1-h6 using relative units */
+h1 {
+    font-size: 2rem; /* ReqC2 ReqC3 */
+    font-weight: bold;
+    margin: 1.5rem 0 1rem; /* ReqC2 */
+}
+
+h2 {
+    font-size: 1.75rem; /* ReqC2 ReqC3 */
+    font-weight: 500;
+    margin: 1.5rem 0 1rem; /* ReqC2 */
+}
+
+h3 {
+    font-size: 1.4rem; /* ReqC2 ReqC3 */
+    font-weight: 500;
+    margin: 1.2rem 0 0.8rem; /* ReqC2 */
+}
+
+h4 {
+    font-size: 1.2rem; /* ReqC2 ReqC3 */
+    font-weight: 500;
+    margin: 1rem 0 0.6rem; /* ReqC2 */
+}
+
+h5 {
+    font-size: 1rem; /* ReqC2 ReqC3 */
+    font-weight: 500;
+    margin: 0.8rem 0 0.5rem; /* ReqC2 */
+}
+
+h6 {
+    font-size: 0.875rem; /* ReqC2 ReqC3 */
+    font-weight: 500;
+    margin: 0.6rem 0 0.4rem; /* ReqC2 */
+}
+
+/* ReqC8: ID-based rule for a specific element */
+#main-content {
+    border-left: 3px solid var(--color-primary);
+    padding-left: var(--spacing-md);
+}
+
+/* ReqS13 ReqS14: nav styled as button-like links (horizontal menu) */
+nav ul {
+    list-style: none;
+    padding: 1em;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.6em 1em; /* ReqC2 */
+    margin: 0.2em; /* ReqC2 */
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem; /* ReqC2 */
+    color: beige;
+    background-color: var(--color-primary); /* ReqC4 */
+    border-radius: 10px;
+}
+
+/* ReqS14: visible hover and keyboard focus state for nav links */
+nav a:hover,
+nav a:focus {
+    background-color: var(--color-secondary); /* ReqC4 */
+    outline: 2px solid var(--color-text);
+}
+
+/* ReqC17: th styled distinctly from td */
+th {
+    background-color: rgb(229, 171, 240);
+    font-weight: bold;
+    text-align: center;
+    padding: 0.4em; /* ReqC2 */
+}
+
+td {
+    padding: 0.4em; /* ReqC2 */
+    text-align: center;
+}
+
+/* ReqC7: reusable .btn class for buttons */
+.btn {
+    padding: 0.6em 1em; /* ReqC2 */
+    margin-left: 1em; /* ReqC2 */
+    border: none;
+    background-color: var(--color-btn); /* ReqC4 */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color-btn-hover); /* ReqC4 */
+    outline: 2px solid var(--color-text);
+}
+
+/* ReqC7: reusable .highlight utility class */
+.highlight {
+    background-color: rgb(231, 241, 255);
+}
+
+button.highlight {
+    background-color: #5c3636;
+    color: #ffff;
+    border: 0.15em solid #003f8a; /* ReqC2 */
+    font-weight: bold;
+}
+
+/* ReqC7: reusable .responsive layout class */
+.responsive {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em; /* ReqC2 */
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* ReqC2 */
+    gap: 1rem; /* ReqC2 */
+}
+
+#language-switcher {
+    width: auto;
+    display: inline-block;
+    height: 2rem; /* ReqC2 */
+    padding: 0 0.4rem; /* ReqC2 */
+    font-size: 0.85rem; /* ReqC2 */
+    border-radius: 4px;
+    line-height: 1.2;
+    margin-left: 1rem; /* ReqC2 */
+    margin-top: 2.3rem; /* ReqC2 */
+    background-color: yellowgreen;
+}
+
+/* ReqI11: language-dependent styling via :lang() pseudo-class */
+footer:lang(en) {
+    color: #b1babc;
+    background-color: #563705;
+}
+
+/* ReqI11: Romanian language styling */
+footer:lang(ro) {
+    color: #93977a;
+    background-color: #8b2e2e;
+}
+
+footer {
+    padding: 2em 1rem; /* ReqC2 */
+}
+
+/* ReqC18: consistent form control styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+    font-family: inherit; /* ReqC18 */
+    font-size: 1rem; /* ReqC2 ReqC18 */
+    padding: 0.5rem; /* ReqC2 ReqC18 */
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* ReqC18: clear focus styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* ReqC18: required fields visually identifiable */
+input:required,
+textarea:required {
+    border-left: 4px solid var(--color-primary);
+}
+
+/* ReqC20: responsive layout — media query breakpoint at 768px */
+@media (max-width: 768px) {
+    .responsive {
+        width: 90%;
+        padding: 0.8em; /* ReqC2 */
+    }
+
+    nav li {
+        display: block;
+    }
+}
+
+/* ReqC20: very narrow screens (mobile) */
+@media (max-width: 480px) {
+    .responsive {
+        width: 100%;
+        padding: 0.6em; /* ReqC2 */
+    }
+}

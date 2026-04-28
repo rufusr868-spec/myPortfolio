@@ -1,0 +1,145 @@
+<!DOCTYPE html> <!--ReqH1-->
+<html lang="en-GB"> <!--ReqH1-->
+    <head>
+        <!--ReqH2-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Personal portfolio of embedded and software projects">
+        <meta name="author" content="Andrei">
+        <meta name="keywords" content="embedded,RLC,transistor logic,remote car">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/single-page.css">
+        <script src="js/i18n/i18n.js" defer></script> <!--ReqI6-->
+        <title data-i18n="page.title">My Projects</title> <!--ReqH2-->
+    </head>
+<body>
+    <!--ReqH3-->
+    <header>
+        <div class="header-bar">
+            <h1 data-i18n="index.title">Welcome to my site</h1> <!--ReqH5-->
+            <!--ReqI7-->
+            <select id="language-switcher" onchange="switchLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ro">Romanian</option>
+            </select>
+        </div>
+        <!--ReqH8-->
+        <nav>
+            <ul>
+                <!--ReqH9: target="_self" on internal links, target="_blank" on external-->
+                <li><a href="index.html" target="_self" data-i18n="navigation.home">Home</a></li>
+                <li><a href="pages/projects.html" target="_self" data-i18n="navigation.projects">Projects</a></li>
+                <li><a href="pages/contact.html" target="_self" data-i18n="navigation.contact">Contact</a></li>
+                <li><a href="#about" target="_self" data-i18n="navigation.about">About me</a></li>
+                <li><a href="#goal" target="_self" data-i18n="navigation.goal">My goal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--ReqH3 ReqH4-->
+    <main class="responsive" id="main-content">
+
+        <!--ReqH3-->
+        <section id="about">
+            <h2 data-i18n="sections.about.title">About Me</h2> <!--ReqH5-->
+            <!--ReqH4-->
+            <p data-i18n="section.about.description">
+                I am a student looking to build
+                <strong>projects</strong> <!--ReqH6-->
+                based on <em>faculty knowledge</em>. <!--ReqH6-->
+            </p>
+
+            <!--ReqH7: dfn for definition, code for inline code-->
+            <p>
+                I work with <dfn title="Microcontroller Unit">MCU</dfn> platforms
+                and write firmware in <code>C/C++</code>.
+                <!-- ReqH7: cite for reference -->
+                As noted in <cite>The Art of Electronics</cite>, good circuit design starts with fundamentals.
+            </p>
+
+            <!--ReqI8-->
+            <p data-i18n="deadline.title">My next deadline:
+                <span id="deadline-date" data-date="2026-07-15"></span>
+            </p>
+        </section>
+
+        <!--ReqH3-->
+        <article id="goal">
+            <h2 data-i18n="sections.goal.title">My Goal</h2> <!--ReqH5-->
+            <p class="rumi" data-i18n="sections.goal.description">
+                To learn and build electronic devices and more
+            </p>
+        </article>
+
+        <!--ReqH3-->
+        <section id="projects">
+            <h2 data-i18n="sections.projects.title">Finished Projects</h2> <!--ReqH5-->
+
+            <!--ReqH14: nested list (unordered > ordered)-->
+            <ul>
+                <li>Embedded
+                    <ol class="f-projects">
+                        <li data-i18n="projects.car">Remote Car</li>
+                        <li data-i18n="projects.sonar">Sonar</li>
+                    </ol>
+                </li>
+                <li>Software
+                    <ol class="f-projects">
+                        <li data-i18n="projects.gameSpace">SpaceShip game</li>
+                        <li data-i18n="projects.gamePacman">Pacman copy</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <!--ReqH5-->
+            <h3>To sell</h3>
+            <!--ReqI9-->
+            <p>
+                My Offer: for remote car is
+                <span id="car-price" data-price="19.99"></span>
+            </p>
+            <!--ReqI10-->
+            <p>
+                Average build time: <span data-number="4.75"></span> hours &mdash;
+                Success rate: <span data-percentage="0.87"></span>
+            </p>
+        </section>
+
+        <!--ReqH3-->
+        <section id="referenceas">
+            <h2 data-i18n="sections.referenceas.title">References</h2> <!--ReqH5-->
+            <p data-i18n="sections.referenceas.description">
+                Here you can find the source materials I use
+            </p>
+            <!--ReqH9: external link with target="_blank"-->
+            <p>
+                Visit
+                <a href="https://www.arduino.cc" target="_blank">Arduino official site</a> <!--ReqH9-->
+                for documentation and tutorials.
+            </p>
+        </section>
+
+    </main>
+
+    <!--ReqH3-->
+    <footer>
+        <!--ReqH12 ReqH10-->
+        <figure>
+            <!--ReqH10: image used as a link (multimedia link)-->
+            <a href="index.html" target="_self">
+                <img src="src/pcb.jpg"
+                     alt="Basic PCB"
+                     title="Printed Circuit Board"
+                     width="300"
+                     height="100"
+                     data-i18n-alt="footer.logoAlt"
+                     data-i18n-title="footer.logoTitle"> <!--ReqH12-->
+            </a>
+            <!--ReqH13-->
+            <figcaption data-i18n="figure.description">Nice picture, isn't it?</figcaption>
+        </figure>
+        <p data-i18n="footer.rights">&copy; 2026 My brand. All rights reserved</p>
+    </footer>
+
+</body>
+</html>

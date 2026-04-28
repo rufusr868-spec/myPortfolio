@@ -1,0 +1,126 @@
+/* ReqS5: main element 90vw, horizontally centered on this page */
+main {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 1rem; /* ReqC2 */
+}
+
+/* ReqS11: descendant combinator — all sections on this page */
+main section {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.3;
+}
+
+/* ReqS6: ::first-letter decorative typographic treatment on #about */
+#about::first-letter {
+    font-size: 1.5em; /* ReqC2 */
+    font-weight: bold;
+    color: blueviolet;
+}
+
+/* ReqS9: override #main-content ID rule from styles.css (ReqC8) for this page */
+#main-content {
+    border-left: 5px solid blueviolet;
+    padding-left: 1.5rem; /* ReqC2 */
+    background-color: #fdf8ff;
+}
+
+/* ReqC7 (used on this page): .rumi reusable card-like component */
+.rumi {
+    margin: 1.5em 0; /* ReqC2 */
+    padding: 1em; /* ReqC2 */
+    border: 2px solid #0d3944;
+    background-color: beige;
+}
+
+/* ReqS15: change list-style-type for .f-projects list */
+.f-projects {
+    list-style-type: lower-roman; /* ReqS15 */
+    list-style-position: inside;
+    line-height: 1.5em; /* ReqC2 */
+    margin-left: 0;
+}
+
+/* ReqC18: form control widths and spacing (page-specific override) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    width: 100%;
+    margin: 0.4em 0 1em; /* ReqC2 */
+}
+
+/* ReqS10: child combinator — direct p children of fieldset */
+fieldset > p {
+    color: #333;
+    font-style: italic;
+}
+
+/* ReqS12: adjacent sibling combinator — legend followed by label */
+legend + label {
+    margin-top: 0.8em; /* ReqC2 */
+    display: block;
+}
+
+fieldset {
+    margin-bottom: 1.2em; /* ReqC2 */
+    padding: 1em; /* ReqC2 */
+    border: 1px solid #ccc;
+}
+
+/* ReqS16: table caption styling — position and appearance */
+caption {
+    caption-side: top; /* ReqS16 */
+    font-weight: bold;
+    font-size: 1.1em; /* ReqC2 */
+    padding: 0.5em 0; /* ReqC2 */
+    color: #690f0f;
+    text-align: left;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.4em; /* ReqC2 */
+    margin-bottom: 0.4em; /* ReqC2 */
+}
+
+/* ReqJ3: visual validity classes */
+input.valid,
+textarea.valid,
+select.valid {
+    border-color: green;
+    box-shadow: 0 0 8px 3px rgba(21, 72, 10, 0.6);
+}
+
+input.invalid,
+textarea.invalid,
+select.invalid {
+    border-color: red;
+    box-shadow: 0 0 8px 3px rgba(95, 8, 8, 0.6);
+}
+
+/* ReqJ5: error box hidden by default, shown with .visible class */
+.error-box {
+    display: none;
+    background: #ffe5e5;
+    color: #a30000;
+    border: 2px solid #ff4d4d;
+    padding: 1em; /* ReqC2 */
+    margin-bottom: 1em; /* ReqC2 */
+    border-radius: 12px;
+    font-size: 0.95rem; /* ReqC2 */
+    line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.15);
+}
+
+.error-box.visible {
+    display: block;
+}
+
+/* mouse/keyboard interaction transition */
+input,
+textarea {
+    transition: background-color 0.2s;
+}

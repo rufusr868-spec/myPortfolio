@@ -1,0 +1,67 @@
+{
+    "en": {
+        "page.title": "My Projects",
+        "index.title": "Welcome to my site",
+
+        "deadline.title": "My next deadline:",
+
+        "navigation.home": "Home",
+        "navigation.projects": "Projects",
+        "navigation.contact": "Contact",
+        "navigation.about": "About me",
+        "navigation.goal": "My goal",
+
+        "sections.about.title": "About Me",
+        "section.about.description": "I am a student looking to build <strong>projects</strong> based on <em>faculty knowledge</em>.",
+
+        "sections.goal.title": "My Goal",
+        "sections.goal.description": "To learn and build electronic devices and more",
+
+        "sections.projects.title": "Finished Projects",
+        "projects.car": "Remote Car",
+        "projects.sonar": "Sonar",
+        "projects.gameSpace": "SpaceShip game",
+        "projects.gamePacman": "Pacman copy",
+
+        "sections.referenceas.title": "References",
+        "sections.referenceas.description": "Here you can find the source materials I use",
+
+        "figure.description": "Nice picture, isn't it?",
+        "footer.rights": "© 2026 My brand. All rights reserved",
+        "footer.logoAlt": "Basic PCB",
+        "footer.logoTitle": "Printed Circuit Board"
+    },
+
+    "ro": {
+        "page.title": "Proiectele mele",
+        "index.title": "Bine ai venit pe site-ul meu",
+
+        "deadline.title": "Următorul deadline:",
+
+        "navigation.home": "Acasă",
+        "navigation.projects": "Proiecte",
+        "navigation.contact": "Contact",
+        "navigation.about": "Despre mine",
+        "navigation.goal": "Obiectivul meu",
+
+        "sections.about.title": "Despre mine",
+        "section.about.description": "Sunt un student care vrea să construiască <strong>proiecte</strong> bazate pe <em>cunoștințe academice</em>.",
+
+        "sections.goal.title": "Obiectivul meu",
+        "sections.goal.description": "Să învăț și să construiesc dispozitive electronice și altele",
+
+        "sections.projects.title": "Proiecte finalizate",
+        "projects.car": "Mașină telecomandată",
+        "projects.sonar": "Sonar",
+        "projects.gameSpace": "Joc SpaceShip",
+        "projects.gamePacman": "Copia Pacman",
+
+        "sections.referenceas.title": "Referințe",
+        "sections.referenceas.description": "Aici găsești materialele sursă pe care le folosesc",
+
+        "figure.description": "Poză faină, nu?",
+        "footer.rights": "© 2026 Brandul meu. Toate drepturile rezervate",
+        "footer.logoAlt": "Placă PCB",
+        "footer.logoTitle": "Circuit imprimat"
+    }
+}
